@@ -2,10 +2,10 @@ const  { ApolloServer } = require("apollo-server-express");
 
 require("dotenv").config({ path: "./.env" });
 const { app } = require("./app");
-const { ConnectToDB } = require("./src/config/db");
-const typeDefs = require("./src/graphql/typeDefs")
-const resolvers = require("./src/graphql/resolvers");
-const { authentication } = require("./src/middleware/authentication.middleware");
+const { ConnectToDB } = require("./config/db");
+const typeDefs = require("./graphql/typeDefs")
+const resolvers = require("./graphql/resolvers");
+const { authentication } = require("./middleware/authentication.middleware");
 
 const PORT = process.env.PORT || 9090;
 
